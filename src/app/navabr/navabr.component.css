@@ -1,0 +1,18 @@
+
+.scrolled{
+    background-color: rgba(0, 0, 0, .8)
+}
+li a{
+    font-weight: bold
+}
+li a:hover{
+    color: #fd8a38
+
+}
+.navbar-brand{
+    font-weight: bold;
+    font-size: 28px;
+}
+.navbar-brand  span{
+color: #fd8a38
+}

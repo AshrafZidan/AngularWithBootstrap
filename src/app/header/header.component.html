@@ -1,0 +1,373 @@
+
+
+<header>
+  <div class="overlay">
+  <div class="container">
+    
+    <div class="row center">
+      <div class="col-md-6">
+        <h1 class="upperCase text-center-xs">Ax<span>IT</span></h1>
+        <p class="lead text-center-xs">MODERN AXURE TEMPLATE FOR BEAUTIFUL PROTOTYPES</p>
+        <p class="small text-center-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+        <button class="button">Download</button>
+      </div>
+
+      <div class="col-md-6">
+        
+        <form  class="center-block" novalidate #userform="ngForm" >
+        <h2 class="text-center">Try Your <span>Free</span> Trial Today</h2>
+        <div class="name">
+        <input  class="form-control" required  minlength="5" (ngModel)="userData.name" type="text" name="name" placeholder="name"  
+        #nameInput="ngModel" autocomplete="false">
+
+
+        <div *ngIf="nameInput.errors && (nameInput.dirty || nameInput.touched)" class="warning">           
+          <p [hidden]="!nameInput.errors.required">Name Must be Entered </p>
+          <p [hidden]="!nameInput.errors.minlength">Name Must be More than 5 </p>
+             
+         </div>
+        </div>
+
+        <div class="name">
+          <input class="form-control" required name="email" (ngModel)="userData.email" type="email" 
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+           #emailInput="ngModel" autocomplete="false" placeholder="Email">
+
+
+        <div *ngIf="emailInput.errors && (emailInput.dirty || emailInput.touched)" class="warning">           
+          <p [hidden]="!emailInput.errors.required">Email Must be Entered </p>
+          <p [hidden]="!emailInput.errors.pattern"> Invalid Email </p>
+             
+         </div>
+         </div>
+         <div class="name">
+         <input class="form-control"  name="pass" (ngModel)="userData.pass" type="password" 
+          pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" 
+           #passInput="ngModel" autocomplete="false" placeholder="Password">
+
+
+        <div *ngIf="passInput.errors && (passInput.dirty || passInput.touched)" class="warning" >           
+         
+          <p [hidden]="!passInput.errors.pattern">Password Must Contain Upper and Lower case</p>
+             
+         </div>
+         </div>
+       <input class="btn btn-block" [disabled]='!userform.form.valid' type="submit" value="Get started">
+      </form>
+      </div>
+    </div>  
+    </div>
+    </div>
+
+</header>
+<div class="social">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h4>Social Media</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+
+      </div>
+       <div class="col-md-8">
+        <i class="fa fa-facebook fa-3x fa-fw"><a href=""></a></i>
+        <i class="fa fa-twitter fa-3x fa-fw"><a href=""></a></i>
+        <i class="fa fa-google-plus fa-3x fa-fw"><a href=""></a></i>
+        <i class="fa fa-pinterest fa-3x fa-fw"><a href=""></a></i>
+        <i class="fa fa-instagram fa-3x fa-fw"><a href=""></a></i>
+        <i class="fa fa-stumbleupon fa-3x fa-fw"><a href=""></a></i>
+        <i class="fa fa-rss fa-3x fa-fw"><a href=""></a></i>
+        
+       </div>
+    </div>
+  </div>
+</div>
+<!--start tabs-->
+<div class="tabs">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <ul class="list-unstyled tab-switch text-center upperCase">
+          <li class="selected" data-class="tab-one">Tab1</li>
+          <li data-class="tab-two">Tab2</li>
+          <li data-class="tab-three">Tab3</li>
+        </ul>
+      </div>
+      <div class="col-md-7">
+        <div class="tabs-content">
+          <div *ngFor="let cont of content" class="{{cont.class}} ">
+            <h3>{{cont.h3}}</h3>
+                  <p class="lead">{{cont.par}}</p>
+              <button class="btn btn-lg">Download</button>
+          </div>
+     </div>
+      </div>
+      <div class="col-md-3">
+          <picture>
+          <img class="img-responsive center-block" src="./../../assets/images/tower.png" alt="Tower">
+          </picture>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--start sublist-->
+<div class="sublist">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <picture>
+          <img class="img-responsive sub-image center-block" src="./../../assets/images/home.png" alt="Home">
+        </picture>
+      </div>
+     
+      <div class="col-md-6"> 
+        <div class="list-info">
+          <h3 class="head-border"> SubList Section </h3>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. accumsan et viverra justo commodo.</p>
+
+          <div *ngFor="let list of list_info" class="list-icon">
+            <i class="{{list.icon}} pull-left"></i>
+            <div class="text-info pull-left">
+            <h4>{{list.h4}}</h4>
+            <p>{{list.pra}}</p>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        </div>
+     </div>
+</div>
+</div>
+<!--standrad picture-->
+<div class="standard-picture">
+  <div class="container">
+    <div class="row">
+     
+      <div class="col-md-6"> 
+        <div class="list-info">
+          <h3 class="head-border"> Standard Picture </h3>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. accumsan et viverra justo commodo.</p>
+
+      
+        </div>
+        </div>
+
+         <div class="col-md-6">
+        <picture>
+          <img class="img-responsive sub-image center-block" src="./../../assets/images/town.png" alt="Home">
+        </picture>
+      </div>
+     
+
+     </div>
+</div>
+</div>
+<!--Start this is Awesome-->
+<div class="awesome text-center">
+  <div class="container">
+      <h2 class="h1 head-border-center upperCase">Why This  is Awsome</h2>
+        <p> Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet </p>
+      <div class="row">
+        <div class="col-md-4">
+          <i class="fa fa-lightbulb-o fa-3x"></i>
+          <h3 class="feat-head">Thoughtful Desgin</h3>
+          <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra.</p>
+        </div>
+
+         <div class="col-md-4">
+          <i class="fa fa-keyboard-o fa-3x"></i>
+          <h3 class="feat-head">Well Crafted</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fa fa-flash fa-3x"></i>
+          <h3 class="feat-head">  ُEasy To Customize</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra.</p>
+        </div>
+      </div>
+  </div>
+</div>
+<!--start price Section-->
+<div class="price-options text-center">
+  <div class="container">
+     <h2 class="h1 head-border-center upperCase">Pricing options</h2>
+        <p> Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet </p>
+        <div class="row">
+
+
+          <div class="col-md-4 price-box basic">
+            <h3 class="head-plan">Basic</h3>
+            <div class="option-price">
+            <span class="price"><span class="usd">$</span>0</span>
+            <span class="period">Free For Life</span>
+            </div>
+                <ul class="list-unstyled congigration">
+               <li>1 gb of space</li>
+               <li>10 gb of bandwidth</li>
+               <li>3 websites</li>
+               <li>Basic Customization</li>
+               <li>wordpress integration</li>
+               <li>email support</li>
+             </ul>
+             </div>
+
+
+              <div class="col-md-4 price-box">
+            <h3 class="head-plan">Professional</h3>
+            <div class="option-price">
+            <span class="price"><span class="usd">$</span>19</span>
+            <span class="period">Monthly Payment</span>
+            </div>
+            <p class="most-pop"> Our Most Popular</p>
+                <ul class="list-unstyled congigration">
+               <li>1 gb of space</li>
+               <li>10 gb of bandwidth</li>
+               <li>3 websites</li>
+               <li>Basic Customization</li>
+               <li>wordpress integration</li>
+               <li>email support</li>
+             </ul>
+             </div>
+            
+
+
+             <div class="col-md-4 price-box enterprise">
+            <h3 class="head-plan">Enterprise</h3>
+            <div class="option-price">
+            <span class="price"><span class="usd">$</span>70</span>
+            <span class="period">Monthly Payment</span>
+            </div>
+                <ul class="list-unstyled congigration">
+               <li>1 gb of space</li>
+               <li>10 gb of bandwidth</li>
+               <li>3 websites</li>
+               <li>Basic Customization</li>
+               <li>wordpress integration</li>
+               <li>email support</li>
+             </ul>
+             </div>
+            
+            
+        </div>
+        </div>
+</div>
+  <!--start testmonials-->
+<div class="tes">
+  <div class="container">
+      <h2 class="h1  text-center head-border-center upperCase">WHAT OUR CUSTOMERS ARE SAYING</h2>
+        <p class="text-center tes-des"> Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet </p>
+      <div class="row">
+        <div class="col-md-4">
+          <p class="client-say">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra.</p>
+        <div class="media">
+          <div class="media-left">
+      <img class="media-object img-thumbnail img-circle" src="./../../assets/images/avatar.png" alt="Generic placeholder image">
+          </div>
+      <div class="media-body">
+        <h5 class="media-heading">Ahraf Zinda</h5>
+        <p>Manger</p>
+        </div>
+  </div>
+        </div>
+
+         
+
+
+          <div class="col-md-4">
+          <p class="client-say" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra.</p>
+        <div class="media">
+          <div class="media-left">
+      <img class="media-object img-thumbnail img-circle" src="./../../assets/images/avatar.png" alt="Generic placeholder image">
+          </div>
+      <div class="media-body">
+        <h5 class="media-heading">Ahraf Zinda</h5>
+        <p>Manger</p>
+        </div>
+  </div>
+        </div>
+
+
+
+
+         <div class="col-md-4">
+          <p class="client-say">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra.</p>
+        <div class="media">
+          <div class="media-left">
+      <img class="media-object img-thumbnail img-circle" src="./../../assets/images/avatar.png" alt="Generic placeholder image">
+          </div>
+      <div class="media-body">
+        <h5 class="media-heading">Ashraf Zinda</h5>
+        <p>Manger</p>
+        </div>
+  </div>
+        </div>
+       
+      </div>
+  </div>
+</div>
+<!--start stylish-->
+<div class="stylish">
+  <div class="overlay ">
+  <div class="container">
+      <div class="central">
+        <h2 class=" h1 head-border-center upperCase text-center">Stylish Axure Desgin</h2>
+
+        <p class="stylish-desc text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+        <button class="stylish-Download">Download</button>
+        </div>
+      </div>
+    </div>  
+</div>  
+
+<!--start Contact Us-->
+
+<div class="contact-Us">
+  <div class="container">
+        <h2 class=" h1 head-border-center upperCase text-center">Contact Us</h2>
+
+        <p class="contact-desc text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+       
+          
+             <form style="width: 100%" class="row contact" action="" novalidate #finalForm="ngForm">
+                <div class="col-md-6">
+        <input class="form-control input-lg one" required name="name" (ngModel)="contactData.name" 
+          required minlength="5"
+           #nameeInput="ngModel" autocomplete="false" placeholder="Name">
+          <div *ngIf="nameeInput.errors && (nameeInput.dirty || nameeInput.touched)" class="warning">           
+          <p [hidden]="!nameeInput.errors.required">Name Must be Entered </p>
+          <p [hidden]="!nameeInput.errors.minlength"> At least 5 Charchter </p>
+           </div>
+        <input class="form-control input-lg two" required name="email" (ngModel)="contactData.email" type="email" 
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+           #emaiContactlInput="ngModel" autocomplete="false" placeholder="Email">
+          <div *ngIf="emaiContactlInput.errors && (emaiContactlInput.dirty || emaiContactlInput.touched)" class="warning">           
+          <p [hidden]="!emaiContactlInput.errors.required">Email Must be Entered </p>
+          <p [hidden]="!emaiContactlInput.errors.pattern"> Invalid Email </p>
+          </div>
+
+          <input class="form-control input-lg three"  name="subject" (ngModel)="contactData.subject" 
+          required minlength="10" #subjectInput="ngModel" autocomplete="false" placeholder="subject">
+
+             <div *ngIf="subjectInput.errors && (subjectInput.dirty || subjectInput.touched)" class="warning">           
+          <p [hidden]="!subjectInput.errors.required"> Must be Entered </p>
+          <p [hidden]="!subjectInput.errors.minlength"> At least 10 Charchter </p>
+          </div>
+      
+          </div>
+          <div class="col-md-6">
+            <textarea class="form-control input-lg" required maxlength="250" (ngModel)="contactData.message" #messageInput="ngModel" placeholder="Meesage"></textarea>
+<!--            
+          <div *ngIf="messageInput.errors && (messageInput.dirty || messageInput.touched)" class="warning">    <p [hidden]="!messageInput.errors.required">please write Your Message</p>
+          <p [hidden]="!messageInput.errors.maxlength"> At Most 250 Charchter </p>
+             
+         </div>-->
+             <button>Send Message</button>
+
+          </div>
+                 
+                   
+            </form>
+                       
+</div>  
+</div>
+<app-footer> </app-footer>

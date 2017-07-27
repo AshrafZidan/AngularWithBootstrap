@@ -1,0 +1,24 @@
+@media (max-width:919px){
+    header{
+        min-height: 950px;
+
+    }
+    .text-center-xs{
+        text-align: center;
+    }
+
+    header h1 ~ .lead::after{
+    
+    margin: 25px auto;
+ 
+}
+.center{
+    margin-top:50px;
+}
+
+header .button{
+    display: block;
+margin: 30px auto;    
+   
+}
+}
